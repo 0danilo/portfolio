@@ -14,6 +14,7 @@ and gives visitors a way to contact me.
 - `index.html`: Home page with a short introduction and featured projects.
 - `about.html`: About page with my background, skills, and interests.
 - `projects.html`: Projects page with descriptions and links to demos and source code.
+- `skills.html`: Skills page with technical skills and proficiency levels.
 - `contact.html`: Contact page with my email and relevant profile links.
 
 Use owner-provided content. Do not invent credentials, work history, project
