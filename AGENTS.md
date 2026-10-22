@@ -14,7 +14,6 @@ and gives visitors a way to contact me.
 - `index.html`: Home page with a short introduction and featured projects.
 - `about.html`: About page with my background, skills, and interests.
 - `projects.html`: Projects page with descriptions and links to demos and source code.
-- `skills.html`: Skills page with technical skills and proficiency levels.
 - `contact.html`: Contact page with my email and relevant profile links.
 
 Use owner-provided content. Do not invent credentials, work history, project
@@ -24,8 +23,8 @@ results, or contact information.
 
 - Style: clean, minimal, friendly, and professional, with generous whitespace,
   clear headings, and a consistent layout across pages.
-- Colors: off-white background (`#F8FAFC`), white surfaces (`#FFFFFF`), dark navy
-  text (`#0F172A`), slate secondary text (`#475569`), and blue accents (`#2563EB`).
+- Colors: black background (`#050505`), dark grey surfaces (`#414241`), light green
+  text (`#4cfc5a`), slate secondary text (`#47694c`), and green accents (`#25eb53`).
 - Fonts: use the system sans-serif stack: `system-ui, -apple-system,
   BlinkMacSystemFont, "Segoe UI", sans-serif`.
 - Make layouts responsive for phones, tablets, and desktops.
