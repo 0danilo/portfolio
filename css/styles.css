@@ -5,3 +5,27 @@
 @media(max-width:800px){.header-inner{gap:1rem;padding:1rem 0;min-height:78px}nav{gap:1rem}.grid{grid-template-columns:1fr 1fr}.two-col{gap:2rem}.hero{padding:4rem 0 3rem}}
 @media(max-width:640px){.container{width:calc(100% - 2rem)}.js .menu-toggle{display:block}.js nav{display:none}.js nav.is-open{display:flex}nav{width:100%;flex-direction:column;gap:.25rem;order:4;padding-bottom:.5rem}nav a{padding:.7rem .3rem}.grid,.two-col{grid-template-columns:1fr}.hero{padding:3.5rem 0 2.5rem}.section{padding:2.5rem 0}.section-heading{align-items:flex-start;flex-direction:column}.contact-panel{padding:1.5rem}.theme-toggle{font-size:.85rem}}
 @media(prefers-reduced-motion:no-preference){a,button{transition:background-color .15s,color .15s}html{scroll-behavior:smooth}}
+/* Personal touches shared across the portfolio. */
+:root{color-scheme:dark;--bg:#050505;--surface:#161b17;--text:#4cfc5a;--muted:#b3c6b6;--accent:#25eb53;--line:#414241;--soft:#17271b}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#050505;--surface:#161b17;--text:#4cfc5a;--muted:#b3c6b6;--accent:#25eb53;--line:#414241;--soft:#17271b}
+:root[data-theme="light"]{color-scheme:light;--bg:#f3f8f1;--surface:#fff;--text:#12351b;--muted:#47694c;--accent:#176e30;--line:#c7d5c7;--soft:#e3efdf}
+body{background-image:radial-gradient(ellipse at 90% 8%,var(--soft),transparent 48%)}
+::selection{background:var(--accent);color:var(--bg)}
+.brand{letter-spacing:-.06em}.brand span{display:inline-block;transform:rotate(-12deg);font-size:1.7em;line-height:0}
+.hero{position:relative}.hero>.eyebrow::before{content:"";display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);margin-right:.7rem;box-shadow:0 0 0 5px var(--soft)}
+h1{font-weight:800}h1 .name{display:block;color:var(--accent)}
+.button,:root[data-theme="dark"] .button{color:var(--bg);border:1px solid var(--accent);border-radius:999px}
+.button.secondary{color:var(--text);background:transparent;border-color:var(--line)}
+.button span{display:inline-block;margin-left:.45rem}
+.card{border-radius:20px;box-shadow:0 5px 0 var(--soft)}
+.card .eyebrow{color:var(--accent);text-transform:none;letter-spacing:.06em}
+.card h3{font-size:1.3rem;letter-spacing:-.025em}
+.card a{font-weight:650;text-decoration-thickness:1px}
+.interests{display:flex;flex-wrap:wrap;gap:.65rem;list-style:none;padding:0;margin:2rem 0 0}
+.interests li{display:flex;align-items:center;gap:.5rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.35rem .85rem;font-size:.85rem;color:var(--muted)}
+.interests span{color:var(--accent);font-size:1.1rem}
+.site-footer .footer-inner{align-items:center}.site-footer a{text-decoration:none}.site-footer a::after{content:" ?"}
+@media(hover:hover){.card:hover{border-color:var(--accent)}.button:hover{box-shadow:0 4px 0 var(--line)}nav a:hover{color:var(--accent)}}
+@media(prefers-reduced-motion:no-preference){.card{transition:border-color .2s,transform .2s}.card:hover{transform:translateY(-4px)}.button{transition:box-shadow .2s,transform .2s}.button:hover{transform:translateY(-2px)}.button span{transition:transform .2s}.button:hover span{transform:translate(2px,-2px)}}
+@media(max-width:640px){h1 .name{font-size:.9em}.interests{gap:.5rem}.interests li{font-size:.8rem}}
+:root[data-theme="dark"] .button.secondary{color:var(--text)}

@@ -21,7 +21,7 @@ document.addEventListener('keydown', event => {
 window.matchMedia('(min-width: 641px)').addEventListener('change', closeMenu);
 const themeButton = document.querySelector('.theme-toggle');
 themeButton.hidden = false;
-const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
 let savedTheme;
 try { savedTheme = localStorage.getItem('portfolio-theme'); } catch { /* Storage is optional. */ }
 function setTheme(dark) {
@@ -29,11 +29,10 @@ function setTheme(dark) {
   themeButton.setAttribute('aria-pressed', String(dark));
   themeButton.textContent = dark ? 'Light mode' : 'Dark mode';
 }
-setTheme(savedTheme ? savedTheme === 'dark' : systemTheme.matches);
+setTheme(savedTheme ? savedTheme === 'dark' : true);
 themeButton.addEventListener('click', () => {
   const dark = document.documentElement.dataset.theme !== 'dark';
   setTheme(dark);
   savedTheme = dark ? 'dark' : 'light';
   try { localStorage.setItem('portfolio-theme', savedTheme); } catch { /* Continue without persistence. */ }
 });
-systemTheme.addEventListener('change', event => { if (!savedTheme) setTheme(event.matches); });
