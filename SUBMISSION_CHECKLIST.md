@@ -23,7 +23,7 @@ Reviewed November 6, 2026 against the supplied assignment instructions.
 
 ## Still required or owner confirmation needed
 
-1. **Project link access and scooter preview:** Three owner-provided projects are now included. The major and psychology cards use actual presentation covers. The scooter card uses a clearly labeled illustration because the Onshape model preview loaded blank in the test browser. Confirm an instructor can open all three external links; provide a real model screenshot if you want to replace the illustration.
+1. **Project link access:** Three owner-provided projects are included, and all three cards now use owner-provided screenshots. Confirm an instructor can open all three external project links. The Onshape model viewer could not be verified in the test browser; its screenshot is visible directly on the portfolio.
 2. **GitHub Pages settings:** The live deployment works, but the unauthenticated Pages settings API did not expose the source configuration. In GitHub Settings > Pages, confirm the branch is `main` and the folder is `/ (root)` as required.
 3. **Owner review and demo:** Review the report and code, confirm the personal content, and practice the three-minute demo on a phone and laptop, including keyboard navigation and explaining the JavaScript. Physical devices and the owner's ability to explain the code cannot be verified from browser emulation.
 4. **Submit the report:** Upload the PDF to the assignment yourself. No learning-management-system upload has been performed.

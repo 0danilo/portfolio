@@ -95,7 +95,7 @@ nav a:hover,nav a[aria-current]{color:var(--accent)}nav a[aria-current]{box-shad
 /* Project cards keep full slide previews visible and links aligned. */
 .project-card{display:flex;flex-direction:column}
 .project-card figure{margin:0}
-.project-card figure img{height:auto;aspect-ratio:16/9;object-fit:contain;background:#dfede9}
+.project-card figure img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#fff}
 .project-card figcaption{padding:.5rem 1rem;font-size:.7rem;color:var(--muted);border-bottom:1px solid var(--line)}
 .project-card .card-body{display:flex;flex-direction:column;flex:1}
 .project-card .card-body>a{margin-top:auto;align-self:flex-start}

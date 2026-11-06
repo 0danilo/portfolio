@@ -19,8 +19,8 @@ and gives visitors a way to contact me.
 
 The Projects page showcases the owner's Onshape scooter design, major
 presentation, and psychology presentation, followed by an animated coming-soon
-section. Add only owner-provided project content. The scooter preview is a
-labeled illustration, not a screenshot of the actual model.
+section. Add only owner-provided project content. All three project previews
+use owner-provided screenshots.
 
 Use owner-provided content. Do not invent credentials, work history, project
 results, or contact information.
