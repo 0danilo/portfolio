@@ -77,7 +77,7 @@ Final functional run timestamp (UTC): 2026-11-06T05:20:46.265Z
 | T51 | Lighthouse Accessibility — projects.html | Open https://0danilo.github.io/portfolio/projects.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
 | T52 | Lighthouse Accessibility — skills.html | Open https://0danilo.github.io/portfolio/skills.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
 | T53 | Lighthouse Accessibility — contact.html | Open https://0danilo.github.io/portfolio/contact.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
-| T54 | Project cards and supplied links | Open Projects at phone and laptop sizes; inspect all three cards, preview proportions, descriptions and outgoing links. | Three cards have loaded 16:9 images, descriptions and descriptive new-tab links matching the owner-supplied URLs. | Pass. Account permissions and Onshape model rendering are not asserted. |
+| T54 | Project cards without outgoing links | Open Projects at phone and laptop sizes; inspect all three cards, preview proportions and descriptions; confirm there are no links inside the cards. | Three cards retain loaded 16:9 images and descriptions, with no outgoing card links. | Pass on live retest after link removal. |
 
 ## Failure and retest record
 
@@ -96,6 +96,8 @@ The project update added one functional case (T54). Home and Projects were audit
 
 After replacing all three previews with owner-supplied screenshots (commit `a11a9db`), T54 was retested on the live site at both viewport sizes. All three live image hashes matched the supplied files; images were below 500 KB, rendered in 16:9 frames with contain sizing, and produced no horizontal overflow. The phone menu also passed. Targeted retest timestamp (UTC): 2026-11-06T05:34:46.611Z. This was an image-only refresh; the full functional and Lighthouse results above retain their original run timestamps.
 
+The owner later removed all three outgoing project-card links in commit `99ed76a`. T54 was updated and retested on live GitHub Pages at phone and laptop sizes: no card links remained, all screenshots loaded with correct proportions, and no horizontal overflow was found. Live retest timestamp (UTC): 2026-11-06T05:48:22.522Z. The first deployment check reused a cached pre-deployment page; a fresh URL confirmed the update. Earlier outgoing-link checks are historical results from before this requested change.
+
 ## Lighthouse scores and evidence
 
 | Page | Initial score | Final score |
@@ -112,6 +114,7 @@ After replacing all three previews with owner-supplied screenshots (commit `a11a
 - [Home Lighthouse retest summary](tests/evidence/lighthouse-home-retest.json)
 - [Home and Projects audits after adding the three project cards](tests/evidence/lighthouse-project-update.json)
 - [Live screenshot replacement retest with image hashes](tests/evidence/project-screenshot-refresh.json)
+- [Live project-link removal retest](tests/evidence/project-link-removal.json)
 
 | Page | Phone screenshot | Laptop screenshot |
 | :-- | :-- | :-- |
