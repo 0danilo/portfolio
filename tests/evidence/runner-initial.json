@@ -1,0 +1,265 @@
+{
+  "base": "https://0danilo.github.io/portfolio/",
+  "runAt": "2026-11-06T04:52:39.561Z",
+  "results": [
+    {
+      "testing": "index.html navigation",
+      "steps": "At laptop size, click Home, About Me, Projects, Skills, Contact, and the Portfolio brand; check other local page links.",
+      "expected": "Every navigation destination loads with HTTP 200 and the correct active link.",
+      "result": "Pass",
+      "detail": "All five navigation links, brand, and local content/footer links passed."
+    },
+    {
+      "testing": "index.html laptop layout",
+      "steps": "Open the live page at 1440 × 900; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "index.html phone layout",
+      "steps": "Open the live page at 390 × 844; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "index.html phone menu and navigation",
+      "steps": "At 390px, open and close Menu; reopen and press Escape; open and follow each navigation link; then open and resize to laptop and back.",
+      "expected": "Menu toggles with aria-expanded; Escape closes and returns focus; all five links work; resize clears the open state.",
+      "result": "Pass",
+      "detail": ""
+    },
+    {
+      "testing": "index.html keyboard Tab and Enter",
+      "steps": "On laptop, Tab to skip link and press Enter; Tab through every navigation link and activate each with Enter. On phone, Tab to Menu and activate with Enter.",
+      "expected": "Skip link reaches main; Tab reaches every navigation link with visible focus; Enter follows links and opens the phone menu.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/index.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/index.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "index.html theme toggle and persistence",
+      "steps": "Select light mode; click theme button to dark and back; select dark and reload.",
+      "expected": "Both themes update page, button text and aria-pressed; saved dark choice survives reload.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/index.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/index.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "index.html system theme preference",
+      "steps": "In fresh storage, emulate dark then light system preference; save a manual dark choice and change system preference.",
+      "expected": "Without saved choice, theme follows OS changes; saved manual choice overrides OS.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/index.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/index.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "about.html navigation",
+      "steps": "At laptop size, click Home, About Me, Projects, Skills, Contact, and the Portfolio brand; check other local page links.",
+      "expected": "Every navigation destination loads with HTTP 200 and the correct active link.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/about.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/about.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "about.html laptop layout",
+      "steps": "Open the live page at 1440 × 900; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/about.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/about.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/about.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "about.html phone layout",
+      "steps": "Open the live page at 390 × 844; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "about.html phone menu and navigation",
+      "steps": "At 390px, open and close Menu; reopen and press Escape; open and follow each navigation link; then open and resize to laptop and back.",
+      "expected": "Menu toggles with aria-expanded; Escape closes and returns focus; all five links work; resize clears the open state.",
+      "result": "Pass",
+      "detail": ""
+    },
+    {
+      "testing": "about.html keyboard Tab and Enter",
+      "steps": "On laptop, Tab to skip link and press Enter; Tab through every navigation link and activate each with Enter. On phone, Tab to Menu and activate with Enter.",
+      "expected": "Skip link reaches main; Tab reaches every navigation link with visible focus; Enter follows links and opens the phone menu.",
+      "result": "Fail",
+      "detail": "Enter navigation failed"
+    },
+    {
+      "testing": "about.html theme toggle and persistence",
+      "steps": "Select light mode; click theme button to dark and back; select dark and reload.",
+      "expected": "Both themes update page, button text and aria-pressed; saved dark choice survives reload.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/about.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/about.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "about.html system theme preference",
+      "steps": "In fresh storage, emulate dark then light system preference; save a manual dark choice and change system preference.",
+      "expected": "Without saved choice, theme follows OS changes; saved manual choice overrides OS.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/about.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/about.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/about.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "projects.html navigation",
+      "steps": "At laptop size, click Home, About Me, Projects, Skills, Contact, and the Portfolio brand; check other local page links.",
+      "expected": "Every navigation destination loads with HTTP 200 and the correct active link.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/projects.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/about.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "projects.html laptop layout",
+      "steps": "Open the live page at 1440 × 900; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/projects.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/projects.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "projects.html phone layout",
+      "steps": "Open the live page at 390 × 844; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "projects.html phone menu and navigation",
+      "steps": "At 390px, open and close Menu; reopen and press Escape; open and follow each navigation link; then open and resize to laptop and back.",
+      "expected": "Menu toggles with aria-expanded; Escape closes and returns focus; all five links work; resize clears the open state.",
+      "result": "Pass",
+      "detail": ""
+    },
+    {
+      "testing": "projects.html keyboard Tab and Enter",
+      "steps": "On laptop, Tab to skip link and press Enter; Tab through every navigation link and activate each with Enter. On phone, Tab to Menu and activate with Enter.",
+      "expected": "Skip link reaches main; Tab reaches every navigation link with visible focus; Enter follows links and opens the phone menu.",
+      "result": "Fail",
+      "detail": "Enter navigation failed"
+    },
+    {
+      "testing": "projects.html theme toggle and persistence",
+      "steps": "Select light mode; click theme button to dark and back; select dark and reload.",
+      "expected": "Both themes update page, button text and aria-pressed; saved dark choice survives reload.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/projects.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "projects.html system theme preference",
+      "steps": "In fresh storage, emulate dark then light system preference; save a manual dark choice and change system preference.",
+      "expected": "Without saved choice, theme follows OS changes; saved manual choice overrides OS.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/projects.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/projects.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "skills.html navigation",
+      "steps": "At laptop size, click Home, About Me, Projects, Skills, Contact, and the Portfolio brand; check other local page links.",
+      "expected": "Every navigation destination loads with HTTP 200 and the correct active link.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/skills.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/projects.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/skills.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "skills.html laptop layout",
+      "steps": "Open the live page at 1440 × 900; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/skills.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/skills.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/skills.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "skills.html phone layout",
+      "steps": "Open the live page at 390 × 844; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "skills.html phone menu and navigation",
+      "steps": "At 390px, open and close Menu; reopen and press Escape; open and follow each navigation link; then open and resize to laptop and back.",
+      "expected": "Menu toggles with aria-expanded; Escape closes and returns focus; all five links work; resize clears the open state.",
+      "result": "Pass",
+      "detail": ""
+    },
+    {
+      "testing": "skills.html keyboard Tab and Enter",
+      "steps": "On laptop, Tab to skip link and press Enter; Tab through every navigation link and activate each with Enter. On phone, Tab to Menu and activate with Enter.",
+      "expected": "Skip link reaches main; Tab reaches every navigation link with visible focus; Enter follows links and opens the phone menu.",
+      "result": "Fail",
+      "detail": "Enter navigation failed"
+    },
+    {
+      "testing": "skills.html theme toggle and persistence",
+      "steps": "Select light mode; click theme button to dark and back; select dark and reload.",
+      "expected": "Both themes update page, button text and aria-pressed; saved dark choice survives reload.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/skills.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/skills.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "skills.html system theme preference",
+      "steps": "In fresh storage, emulate dark then light system preference; save a manual dark choice and change system preference.",
+      "expected": "Without saved choice, theme follows OS changes; saved manual choice overrides OS.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/skills.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/skills.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/skills.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "contact.html navigation",
+      "steps": "At laptop size, click Home, About Me, Projects, Skills, Contact, and the Portfolio brand; check other local page links.",
+      "expected": "Every navigation destination loads with HTTP 200 and the correct active link.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/contact.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/skills.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/contact.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "contact.html laptop layout",
+      "steps": "Open the live page at 1440 × 900; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/contact.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/contact.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/contact.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "contact.html phone layout",
+      "steps": "Open the live page at 390 × 844; check document width, headings, images and controls.",
+      "expected": "HTTP 200; one h1; no horizontal overflow; all images load; navigation is appropriate for the viewport.",
+      "result": "Pass",
+      "detail": "Automated layout checks passed; screenshot saved. Physical devices not used."
+    },
+    {
+      "testing": "contact.html phone menu and navigation",
+      "steps": "At 390px, open and close Menu; reopen and press Escape; open and follow each navigation link; then open and resize to laptop and back.",
+      "expected": "Menu toggles with aria-expanded; Escape closes and returns focus; all five links work; resize clears the open state.",
+      "result": "Pass",
+      "detail": ""
+    },
+    {
+      "testing": "contact.html keyboard Tab and Enter",
+      "steps": "On laptop, Tab to skip link and press Enter; Tab through every navigation link and activate each with Enter. On phone, Tab to Menu and activate with Enter.",
+      "expected": "Skip link reaches main; Tab reaches every navigation link with visible focus; Enter follows links and opens the phone menu.",
+      "result": "Fail",
+      "detail": "Enter navigation failed"
+    },
+    {
+      "testing": "contact.html theme toggle and persistence",
+      "steps": "Select light mode; click theme button to dark and back; select dark and reload.",
+      "expected": "Both themes update page, button text and aria-pressed; saved dark choice survives reload.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/contact.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/index.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/contact.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "contact.html system theme preference",
+      "steps": "In fresh storage, emulate dark then light system preference; save a manual dark choice and change system preference.",
+      "expected": "Without saved choice, theme follows OS changes; saved manual choice overrides OS.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/contact.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/contact.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/contact.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "Projects reduced motion",
+      "steps": "Open Projects; compare normal motion with prefers-reduced-motion: reduce.",
+      "expected": "Loading bar animates normally and stays static for reduced motion.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/projects.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/contact.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "testing": "Contact email destinations",
+      "steps": "Inspect and activate both email links in the Contact panel.",
+      "expected": "Each opens a new tab with Gmail compose URL and the correct recipient.",
+      "result": "Fail",
+      "detail": "page.goto: Navigation to \"https://0danilo.github.io/portfolio/contact.html\" is interrupted by another navigation to \"https://0danilo.github.io/portfolio/projects.html\"\nCall log:\n\u001b[2m  - navigating to \"https://0danilo.github.io/portfolio/contact.html\", waiting until \"load\"\u001b[22m\n"
+    }
+  ]
+}

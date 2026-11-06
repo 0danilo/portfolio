@@ -1,0 +1,56 @@
+[
+    {
+        "page":  "index",
+        "url":  "https://0danilo.github.io/portfolio/index.html",
+        "fetchTime":  "2026-11-06T04:53:03.430Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  98.00,
+        "failedAudits":  [
+                             {
+                                 "id":  "heading-order",
+                                 "title":  "Heading elements are not in a sequentially-descending order",
+                                 "score":  0
+                             }
+                         ]
+    },
+    {
+        "page":  "about",
+        "url":  "https://0danilo.github.io/portfolio/about.html",
+        "fetchTime":  "2026-11-06T04:53:54.986Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    },
+    {
+        "page":  "projects",
+        "url":  "https://0danilo.github.io/portfolio/projects.html",
+        "fetchTime":  "2026-11-06T04:54:06.954Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    },
+    {
+        "page":  "skills",
+        "url":  "https://0danilo.github.io/portfolio/skills.html",
+        "fetchTime":  "2026-11-06T04:54:18.611Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    },
+    {
+        "page":  "contact",
+        "url":  "https://0danilo.github.io/portfolio/contact.html",
+        "fetchTime":  "2026-11-06T04:54:30.254Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    }
+]
