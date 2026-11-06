@@ -94,6 +94,8 @@ Final outcome: **54 test cases passed** (49 functional/fallback cases and 5 Ligh
 
 The project update added one functional case (T54). Home and Projects were audited again after publication and both scored 100/100. The other three pages retain their earlier 100/100 audit results; their page content did not change.
 
+After replacing all three previews with owner-supplied screenshots (commit `a11a9db`), T54 was retested on the live site at both viewport sizes. All three live image hashes matched the supplied files; images were below 500 KB, rendered in 16:9 frames with contain sizing, and produced no horizontal overflow. The phone menu also passed. Targeted retest timestamp (UTC): 2026-11-06T05:34:46.611Z. This was an image-only refresh; the full functional and Lighthouse results above retain their original run timestamps.
+
 ## Lighthouse scores and evidence
 
 | Page | Initial score | Final score |
@@ -109,6 +111,7 @@ The project update added one functional case (T54). Home and Projects were audit
 - [Initial Lighthouse summary with timestamps, version and failed audit IDs](tests/evidence/lighthouse-initial.json)
 - [Home Lighthouse retest summary](tests/evidence/lighthouse-home-retest.json)
 - [Home and Projects audits after adding the three project cards](tests/evidence/lighthouse-project-update.json)
+- [Live screenshot replacement retest with image hashes](tests/evidence/project-screenshot-refresh.json)
 
 | Page | Phone screenshot | Laptop screenshot |
 | :-- | :-- | :-- |
