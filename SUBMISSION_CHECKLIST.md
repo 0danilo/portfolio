@@ -9,7 +9,7 @@ Reviewed November 6, 2026 against the supplied assignment instructions.
 | Public GitHub repository named portfolio | Pass. The public GitHub API reports `0danilo/portfolio` with `private: false`. |
 | Working GitHub Pages website | Pass. https://0danilo.github.io/portfolio/ returns HTTP 200. |
 | AGENTS.md covering pages, design, implementation and Git | Pass. Updated to include Skills and the current light/dark palettes. |
-| Five pages with background, education, interests, skills and contact information | Pass. Projects now includes the three owner-provided projects with descriptions, images and links. |
+| Five pages with background, education, interests, skills and contact information | Pass. Projects now includes the three owner-provided projects with descriptions and images. Outgoing card links were removed at the owner's request. |
 | Plain HTML, CSS and JavaScript; external stylesheet; relative local paths | Pass. No application framework or build step. Test dependencies are separate from website code. |
 | Semantic landmarks and one h1 per page | Pass. Checked all five local page files; live heading-order regression is recorded in TESTING.md. |
 | Responsive layout | Pass in browser emulation at 390 x 844 and 1440 x 900, with full-page screenshots. |
@@ -23,7 +23,7 @@ Reviewed November 6, 2026 against the supplied assignment instructions.
 
 ## Still required or owner confirmation needed
 
-1. **Project link access:** Three owner-provided projects are included, and all three cards now use owner-provided screenshots. Confirm an instructor can open all three external project links. The Onshape model viewer could not be verified in the test browser; its screenshot is visible directly on the portfolio.
+1. **Project evidence:** All three cards use owner-provided screenshots. Outgoing project-card links were removed at the owner's request; the project images and descriptions remain visible directly on the portfolio.
 2. **GitHub Pages settings:** The live deployment works, but the unauthenticated Pages settings API did not expose the source configuration. In GitHub Settings > Pages, confirm the branch is `main` and the folder is `/ (root)` as required.
 3. **Owner review and demo:** Review the report and code, confirm the personal content, and practice the three-minute demo on a phone and laptop, including keyboard navigation and explaining the JavaScript. Physical devices and the owner's ability to explain the code cannot be verified from browser emulation.
 4. **Submit the report:** Upload the PDF to the assignment yourself. No learning-management-system upload has been performed.

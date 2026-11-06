@@ -41,4 +41,4 @@ The submission report is in [output/pdf/portfolio-report.pdf](output/pdf/portfol
 - Personal content is based on owner-provided details. The site does not claim completed projects that have not been supplied.
 - GitHub Pages hosts the live website. Review changes before submitting, and rerun affected tests after future site edits.
 
-All three project previews use owner-provided screenshots: the Onshape scooter deck, a psychology slide about brand recall, and the major presentation cover. Each image fits fully inside a consistent 16:9 preview area without cropping or stretching. External project links may require access.
+All three project previews use owner-provided screenshots: the Onshape scooter deck, a psychology slide about brand recall, and the major presentation cover. Each image fits fully inside a consistent 16:9 preview area without cropping or stretching. Outgoing project-card links were removed at the owner's request.
