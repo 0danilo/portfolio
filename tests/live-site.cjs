@@ -157,6 +157,26 @@ async function test(testing, steps, expected, run) {
     }
     return 'Compose targets and new-tab activation checked; no email sent; Gmail sign-in/delivery not tested.';
   });
+  await test('Project cards and supplied links', 'Open Projects at phone and laptop sizes; inspect all three cards, preview proportions, descriptions and outgoing links.', 'Three project cards have loaded 16:9 images, descriptions, descriptive new-tab links and the exact owner-supplied destinations.', async () => {
+    const expected = [
+      'https://njit.onshape.com/documents/4793484f8ff79c212a00ddc8/w/720dd0336a40b001faae7939/e/b3be325c0e3401f597aae1d2',
+      'https://docs.google.com/presentation/d/1aRKm2psznMWfIRiJLxHpEYGTixvLL7rtSvQ75T-fJRQ/edit',
+      'https://docs.google.com/presentation/d/1JNyQQgYnWoHq5Fe6TbeRr9QrX2wI8SYihaR8kncC42Q/edit'
+    ];
+    for (const page of [mp,dp]) {
+      await page.goto(base+'projects.html');
+      const cards=page.locator('.project-card'); check(await cards.count()===3,'Expected three project cards');
+      for (let i=0;i<3;i++) {
+        const card=cards.nth(i), img=card.locator('figure img'); await img.scrollIntoViewIfNeeded();
+        await img.evaluate(n=>n.decode());
+        const box=await img.boundingBox(); check(Math.abs(box.width/box.height-16/9)<0.02,'Preview aspect ratio incorrect');
+        check(await card.locator('.card-body>p:not(.eyebrow)').innerText() !== '', 'Missing description');
+        const link=card.locator('a'); check(await link.getAttribute('href')===expected[i],'Wrong supplied project URL');
+        check(await link.getAttribute('target')==='_blank' && (await link.getAttribute('rel')).includes('noopener'),'Unsafe new-tab link');
+      }
+    }
+    return 'Card content, local previews and exact outgoing URLs checked. External account permissions and Onshape model rendering are not asserted.';
+  });
   await browser.close();
   fs.writeFileSync(path.join(output,'functional-results.json'),JSON.stringify({base,runAt:new Date().toISOString(),results},null,2));
   console.log(JSON.stringify({total:results.length,failed:results.filter(r=>r.result==='Fail')}));

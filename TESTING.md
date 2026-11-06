@@ -6,7 +6,7 @@ Live website: https://0danilo.github.io/portfolio/
 
 ## Test environment and scope
 
-All website tests below ran against the deployed GitHub Pages URLs, not local files or Live Preview. The final run tested the site after the heading-order fix in commit `88f3db3` was visible on the live Home page.
+All website tests below ran against the deployed GitHub Pages URLs, not local files or Live Preview. The final functional run tested the three-project update in commit `3d1dc70` after it was visible on GitHub Pages. The earlier heading-order fix and its retest remain recorded below.
 
 - Browser: installed Google Chrome, headless, driven by Playwright.
 - Phone-sized viewport: 390 × 844 CSS pixels, with touch and mobile emulation enabled.
@@ -18,7 +18,7 @@ All website tests below ran against the deployed GitHub Pages URLs, not local fi
 
 The five navigation links are Home (`index.html`), About Me (`about.html`), Projects (`projects.html`), Skills (`skills.html`) and Contact (`contact.html`). Each page's navigation case checks all five links plus the Portfolio brand; its phone-menu case also activates all five links. Local content and footer page links are checked for HTTP 200 responses.
 
-Final functional run timestamp (UTC): 2026-11-06T04:57:03.693Z
+Final functional run timestamp (UTC): 2026-11-06T05:20:46.265Z
 
 ## Test cases
 
@@ -77,6 +77,7 @@ Final functional run timestamp (UTC): 2026-11-06T04:57:03.693Z
 | T51 | Lighthouse Accessibility — projects.html | Open https://0danilo.github.io/portfolio/projects.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
 | T52 | Lighthouse Accessibility — skills.html | Open https://0danilo.github.io/portfolio/skills.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
 | T53 | Lighthouse Accessibility — contact.html | Open https://0danilo.github.io/portfolio/contact.html in Chrome. Run DevTools → Lighthouse → Accessibility, Mobile, Analyze page load (or use the CLI below). | 100/100; no failed scored accessibility audits. | Pass: 100/100. |
+| T54 | Project cards and supplied links | Open Projects at phone and laptop sizes; inspect all three cards, preview proportions, descriptions and outgoing links. | Three cards have loaded 16:9 images, descriptions and descriptive new-tab links matching the owner-supplied URLs. | Pass. Account permissions and Onshape model rendering are not asserted. |
 
 ## Failure and retest record
 
@@ -85,9 +86,13 @@ Final functional run timestamp (UTC): 2026-11-06T04:57:03.693Z
 | T47 Home heading hierarchy | Fail. The Home cards used h3 immediately after the page h1, skipping h2. | Changed the three card headings to h2 and updated their CSS selectors to keep the card styling. Pushed commit `88f3db3`, then confirmed the deployed Home page contained four h2 headings and no h3 headings. | Pass. The browser test confirmed no skipped heading levels on the live page. |
 | T49 Home Lighthouse Accessibility | Fail against the 100/100 target: 98/100, with `heading-order` failing. | The same heading fix described above. | Pass: 100/100 with no failed scored accessibility audits. |
 
-The first functional test-runner attempt also reported failures because it checked URLs before Enter-triggered navigation had finished, interrupting later tests. This was a test-harness timing defect, not a confirmed website defect. The runner was corrected to await navigation. Both the initial results and final rerun are retained in the evidence folder; the final 48 functional cases all passed. A preliminary runner API error was also corrected before collecting the initial result file.
+During local preview of the project update, the slide images initially stretched vertically because their HTML height attributes were not overridden. Setting `height: auto` on the project preview images fixed the proportions before publication. T54 now checks 16:9 proportions on both live viewports.
 
-Final outcome: **53 test cases passed** (48 functional/fallback cases and 5 Lighthouse cases). There are no outstanding confirmed website failures from this test run.
+The first functional test-runner attempt also reported failures because it checked URLs before Enter-triggered navigation had finished, interrupting later tests. This was a test-harness timing defect, not a confirmed website defect. The runner was corrected to await navigation. Both the initial results and final rerun are retained in the evidence folder; the final 49 functional cases all passed. A preliminary runner API error was also corrected before collecting the initial result file.
+
+Final outcome: **54 test cases passed** (49 functional/fallback cases and 5 Lighthouse cases). There are no outstanding confirmed website failures from this test run.
+
+The project update added one functional case (T54). Home and Projects were audited again after publication and both scored 100/100. The other three pages retain their earlier 100/100 audit results; their page content did not change.
 
 ## Lighthouse scores and evidence
 
@@ -103,6 +108,7 @@ Final outcome: **53 test cases passed** (48 functional/fallback cases and 5 Ligh
 - [Initial test-runner results before correcting navigation waits](tests/evidence/runner-initial.json)
 - [Initial Lighthouse summary with timestamps, version and failed audit IDs](tests/evidence/lighthouse-initial.json)
 - [Home Lighthouse retest summary](tests/evidence/lighthouse-home-retest.json)
+- [Home and Projects audits after adding the three project cards](tests/evidence/lighthouse-project-update.json)
 
 | Page | Phone screenshot | Laptop screenshot |
 | :-- | :-- | :-- |

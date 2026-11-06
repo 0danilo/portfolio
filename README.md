@@ -10,7 +10,7 @@ A five-page personal portfolio built with plain HTML, CSS and JavaScript. It int
 
 - **Home:** introduction and links to the rest of the site.
 - **About Me:** background, education, NJIT logo and hobbies.
-- **Projects:** animated work-in-progress page. Three real project showcases still need to be added to meet the assignment's project requirement.
+- **Projects:** an Onshape scooter design, a slideshow about my NJIT major, and a psychology presentation about memorable slogans and jingles, followed by an animated coming-soon section.
 - **Skills:** Python and my current proficiency, with room for future skills.
 - **Contact:** personal and school email links that open Gmail compose. There is no message-sending backend or contact form.
 
@@ -27,7 +27,7 @@ No build step, framework or dependency installation is needed to view the websit
 
 ## Testing and documentation
 
-[TESTING.md](TESTING.md) records 53 live-site test cases covering every page's navigation, phone/laptop layouts, keyboard access, JavaScript features and Lighthouse Accessibility. Final Lighthouse scores are 100/100 on all five pages. The initial Home heading-order failure, fix and retest are recorded there, along with screenshots and reproducible test commands.
+[TESTING.md](TESTING.md) records 54 live-site test cases covering every page's navigation, phone/laptop layouts, keyboard access, JavaScript features and Lighthouse Accessibility. Final Lighthouse scores are 100/100 on all five pages. The initial Home heading-order failure, fix and retest are recorded there, along with screenshots and reproducible test commands.
 
 The latest recorded browser tests use emulated 390 x 844 and 1440 x 900 viewports. They do not represent physical-device testing or a full manual accessibility audit. Test tools are separate from the buildless website.
 
@@ -40,3 +40,5 @@ The submission report is in [output/pdf/portfolio-report.pdf](output/pdf/portfol
 - The Projects loading graphic was inspired by the work-in-progress references supplied during development and implemented with HTML and CSS.
 - Personal content is based on owner-provided details. The site does not claim completed projects that have not been supplied.
 - GitHub Pages hosts the live website. Review changes before submitting, and rerun affected tests after future site edits.
+
+The two presentation previews are actual cover slides from the owner-provided decks. The scooter image is a labeled illustration; the actual Onshape model could not be previewed in the test browser. External project links may require access.

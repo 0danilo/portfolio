@@ -1,0 +1,22 @@
+[
+    {
+        "page":  "index",
+        "url":  "https://0danilo.github.io/portfolio/index.html",
+        "fetchTime":  "2026-11-06T05:20:03.229Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    },
+    {
+        "page":  "projects",
+        "url":  "https://0danilo.github.io/portfolio/projects.html",
+        "fetchTime":  "2026-11-06T05:20:16.046Z",
+        "lighthouseVersion":  "13.6.0",
+        "accessibilityScore":  100,
+        "failedAudits":  [
+
+                         ]
+    }
+]

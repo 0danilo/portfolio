@@ -1,6 +1,6 @@
 {
   "base": "https://0danilo.github.io/portfolio/",
-  "runAt": "2026-11-06T04:57:03.693Z",
+  "runAt": "2026-11-06T05:20:46.265Z",
   "results": [
     {
       "testing": "index.html navigation",
@@ -337,6 +337,13 @@
       "expected": "Each opens a new tab with Gmail compose URL and the correct recipient.",
       "result": "Pass",
       "detail": "Compose targets and new-tab activation checked; no email sent; Gmail sign-in/delivery not tested."
+    },
+    {
+      "testing": "Project cards and supplied links",
+      "steps": "Open Projects at phone and laptop sizes; inspect all three cards, preview proportions, descriptions and outgoing links.",
+      "expected": "Three project cards have loaded 16:9 images, descriptions, descriptive new-tab links and the exact owner-supplied destinations.",
+      "result": "Pass",
+      "detail": "Card content, local previews and exact outgoing URLs checked. External account permissions and Onshape model rendering are not asserted."
     }
   ]
 }
