@@ -92,3 +92,14 @@ nav a:hover,nav a[aria-current]{color:var(--accent)}nav a[aria-current]{box-shad
   @keyframes wip-block{0%,25%,100%{background:var(--soft)}50%,65%{background:var(--accent)}}
 }
 @media(max-width:640px){.projects-intro{padding-top:2.5rem}.work-in-progress{border-radius:16px}.wip-corner{right:1rem;bottom:.75rem;font-size:.85rem}}
+/* Project cards keep full slide previews visible and links aligned. */
+.project-card{display:flex;flex-direction:column}
+.project-card figure{margin:0}
+.project-card figure img{height:auto;aspect-ratio:16/9;object-fit:contain;background:#dfede9}
+.project-card figcaption{padding:.5rem 1rem;font-size:.7rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.project-card .card-body{display:flex;flex-direction:column;flex:1}
+.project-card .card-body>a{margin-top:auto;align-self:flex-start}
+.project-access-note{margin-top:1.5rem;color:var(--muted);font-size:.85rem}
+.project-next{margin-top:3rem;padding:2.5rem 1.25rem}
+.project-next h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:1.5rem}
+.project-next h2 span{color:var(--accent)}
