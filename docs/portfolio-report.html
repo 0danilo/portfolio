@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Danilo Fuentes Portfolio Project Report</title>
+<style>
+@page{size:Letter;margin:.65in}
+*{box-sizing:border-box}
+body{margin:0;font:11pt/1.45 Arial,sans-serif;color:#17251b}
+a{color:#176c32;text-decoration:none}
+.links{font-size:10pt;line-height:1.65;margin-bottom:20pt}
+h1{font-size:24pt;line-height:1.15;margin:0 0 6pt;color:#111}
+.byline{font-size:10pt;color:#47694c;margin:0 0 20pt}
+h2{font-size:13pt;margin:16pt 0 6pt;color:#111}
+p{margin:0 0 9pt}
+.page-two{break-before:page}
+.gallery{display:grid;grid-template-columns:4.4in 1.55in;gap:.35in;align-items:start;margin-top:18pt}
+figure{margin:0}figure img{display:block;width:100%;height:auto;border:1px solid #d8e2d6}
+figcaption{font-size:9pt;color:#47694c;margin-top:7pt;line-height:1.4}
+.note{font-size:10pt;color:#47694c;margin-top:16pt}
+</style>
+</head>
+<body>
+<div class="links">
+<strong>Repository:</strong> <a href="https://github.com/0danilo/portfolio">https://github.com/0danilo/portfolio</a><br>
+<strong>Live website:</strong> <a href="https://0danilo.github.io/portfolio/">https://0danilo.github.io/portfolio/</a>
+</div>
+<h1>Portfolio Project Report</h1>
+<p class="byline">Danilo Fuentes | November 6, 2026</p>
+<h2>Website features</h2>
+<p>My portfolio introduces me as a Software and Data Engineering Technology student at NJIT. It has five pages: Home, About Me, Projects, Skills and Contact. The About Me page covers my background, education and hobbies. The Skills page lists Python and my current experience level. The Contact page has my personal and school email links, which open Gmail compose.</p>
+<p>I used plain HTML, CSS and JavaScript. The layout changes for smaller screens, and the mobile navigation opens with a Menu button. A light/dark mode button remembers a visitor's choice when browser storage is available. Keyboard users can use a skip link, visible focus outlines and the navigation links. The Projects page has an animated loading graphic that stays still when reduced motion is enabled.</p>
+<h2>Challenges and fixes</h2>
+<p>Some of the original wording sounded too generic. I gave Codex examples from my own writing and revised the introductions and descriptions until they felt more natural. I also kept the Projects page honest: it currently says work in progress because I have not supplied completed projects. It still needs three real projects to satisfy the assignment requirement.</p>
+<p>Testing found that the Home page skipped from an h1 heading to h3 card headings. Codex changed those headings to h2 and updated the matching CSS. After the fix was published, the live Home page's Lighthouse Accessibility score went from 98 to 100. All five pages now have recorded scores of 100/100. TESTING.md includes 53 cases and the failure and retest history.</p>
+<h2>A Codex mistake and how it was fixed</h2>
+<p>When I asked for the NJIT logo in the education card, Codex added it too large and put it on a white panel. I pointed out that the logo needed to be smaller and transparent. The SVG already had transparency, so the fix was to remove the white panel and reduce the logo width to 160 pixels. When the image later disappeared, Codex found the missing image tag and restored it.</p>
+<h2>Development and testing</h2>
+<p>Changes were committed and pushed throughout development. The live-site tests covered navigation from every page, phone and laptop layouts, Tab and Enter, menu behavior, themes, storage failures and reduced motion. Browser tests used emulated screen sizes; they were not run on physical devices. Codex assisted with implementation and documentation, and the NJIT logo came from NJIT's official website.</p>
+<section class="page-two">
+<h1>Phone and Laptop Screenshots</h1>
+<p class="byline">Live GitHub Pages site | Contact page</p>
+<p>These screenshots show the same page at two browser viewport sizes. On the laptop-sized screen, the illustration sits beside the introduction. On the phone-sized screen, the content stacks into one column and the navigation becomes a Menu button.</p>
+<div class="gallery">
+<figure><img src="../tests/evidence/screenshots/contact-laptop.png" alt="Full Contact page at laptop-sized width"><figcaption>Laptop-sized viewport: 1440 x 900 CSS pixels.<br>Full-page capture in dark mode.</figcaption></figure>
+<figure><img src="../tests/evidence/screenshots/contact-phone.png" alt="Full Contact page at phone-sized width"><figcaption>Phone-sized viewport: 390 x 844 CSS pixels.<br>Full-page capture in light mode.</figcaption></figure>
+</div>
+<p class="note">Captured from https://0danilo.github.io/portfolio/contact.html during the live-site test run on November 5, 2026, Eastern time. Screenshots of all five pages at both sizes are included with the test evidence in the repository.</p>
+</section>
+</body>
+</html>

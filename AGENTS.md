@@ -3,8 +3,8 @@
 
 ## Owner review
 
-This is a draft for the repository owner to review and edit before building starts.
-The page plan and design below are proposed defaults, pending that review.
+The site has been developed through owner review and incremental edits. Keep
+these instructions aligned with the current pages and design.
 
 ## Site and pages
 
@@ -14,7 +14,11 @@ and gives visitors a way to contact me.
 - `index.html`: Home page with a short introduction and featured projects.
 - `about.html`: About page with my background, skills, and interests.
 - `projects.html`: Projects page with descriptions and links to demos and source code.
+- `skills.html`: Skills page with technical skills and current proficiency.
 - `contact.html`: Contact page with my email and relevant profile links.
+
+The Projects page currently uses a work-in-progress design. The assignment
+requires three real projects; add only owner-provided project content.
 
 Use owner-provided content. Do not invent credentials, work history, project
 results, or contact information.
@@ -23,8 +27,11 @@ results, or contact information.
 
 - Style: clean, minimal, friendly, and professional, with generous whitespace,
   clear headings, and a consistent layout across pages.
-- Colors: black background (`#050505`), dark grey surfaces (`#414241`), light green
-  text (`#4cfc5a`), slate secondary text (`#47694c`), and green accents (`#25eb53`).
+- Light theme: off-white background (`#fafcf9`), pale green surfaces (`#f0f5ee`),
+  dark text (`#17251b`), slate secondary text (`#47694c`), green accents (`#176c32`).
+- Dark theme: black background (`#050505`), dark green surfaces (`#141b15`),
+  light text (`#e9f3e8`), secondary text (`#b2c6b4`), green accents (`#4cfc5a`),
+  and dark grey borders (`#414241`).
 - Fonts: use the system sans-serif stack: `system-ui, -apple-system,
   BlinkMacSystemFont, "Segoe UI", sans-serif`.
 - Make layouts responsive for phones, tablets, and desktops.
